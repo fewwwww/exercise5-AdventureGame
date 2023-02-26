@@ -12,6 +12,7 @@ public class Door : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        print(PublicVars.hasKey[keyNum]);
         // If the door is unlocked, load the level
         if (!locked)
         {

@@ -34,8 +34,9 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Key"))
         {
-            // Key name is "keyX" where X is the key number
+            // Key name is "KeyX" where X is the key number
             int keyNum = Int32.Parse(other.gameObject.name.Substring(3));
+            print("Key " + keyNum + " picked up");
             Destroy(other.gameObject);
             PublicVars.hasKey[keyNum] = true;
         }
