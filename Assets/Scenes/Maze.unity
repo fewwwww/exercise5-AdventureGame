@@ -1789,7 +1789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 3805168680095475272, guid: 3c7a9f0cf6c1fc54597326caf3d721ac, type: 3}
-  gameOverScene: Start
+  gameOverScene: Maze
 --- !u!4 &2102700062
 Transform:
   m_ObjectHideFlags: 0
