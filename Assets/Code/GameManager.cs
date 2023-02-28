@@ -8,11 +8,13 @@ public class GameManager : MonoBehaviour
 {
     public GameObject explosion;
     public string gameOverScene = "Start";
-    public int lives = 3;
+    public int totalLives = 3;
+    private int lives;
     
     // Start is called before the first frame update
     void Start()
     {
+        lives = totalLives;
         if(GameObject.FindObjectsOfType<GameManager>().Length > 1)
         {
             Destroy(gameObject);
@@ -36,6 +38,7 @@ public class GameManager : MonoBehaviour
         Destroy(player);
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(gameOverScene);
+        lives = totalLives;
     }
 
     // Update is called once per frame
