@@ -9,6 +9,14 @@ public class Door : MonoBehaviour
     // Key number
     public int keyNum = 0;
     public string levelToLoad;
+    AudioSource _audioSource;
+    public AudioClip lockedSound;
+    public AudioClip unlockedSound;
+
+    private void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +25,7 @@ public class Door : MonoBehaviour
         if (!locked)
         {
             SceneManager.LoadScene(levelToLoad);
+            _audioSource.PlayOneShot(unlockedSound);
         }
         // If the door is locked, check if the player has the correct key
         else if (other.gameObject.CompareTag("Player"))
@@ -24,7 +33,12 @@ public class Door : MonoBehaviour
             if (PublicVars.hasKey[keyNum])
             {
                 PublicVars.hasKey[keyNum] = false;
+                _audioSource.PlayOneShot(unlockedSound);
                 SceneManager.LoadScene(levelToLoad);
+            }
+            else
+            {
+                _audioSource.PlayOneShot(lockedSound);
             }
         }
     }
