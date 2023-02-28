@@ -15,6 +15,7 @@ public class KillPlayer : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")){
+            print("kill player");
             _gameManager.loseLife(3);
         }
     }
