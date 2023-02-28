@@ -331,6 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42673c6a663949de8e09d51d98c50ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 0}
 --- !u!195 &259133870
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -465,7 +466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locked: 1
   keyNum: 0
-  levelToLoad: Start
+  levelToLoad: Maze
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,6 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42673c6a663949de8e09d51d98c50ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 0}
 --- !u!195 &1936125232
 NavMeshAgent:
   m_ObjectHideFlags: 0
