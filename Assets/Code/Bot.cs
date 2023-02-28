@@ -7,6 +7,7 @@ public class Bot : MonoBehaviour
 {
     NavMeshAgent _navMeshAgent;
     GameObject player;
+    public GameObject explosion;
 
     void Start()
     {
@@ -26,7 +27,13 @@ public class Bot : MonoBehaviour
             // Wait a second
             yield return new WaitForSeconds(1f);
             // Set the destination to the player's position
-            _navMeshAgent.destination = player.transform.position;
+            if (player != null) {
+                _navMeshAgent.destination = player.transform.position;
+            } else {
+                Instantiate(explosion, gameObject.transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
+            
         }
     }
 }
