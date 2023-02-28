@@ -9,7 +9,11 @@ public class Player : MonoBehaviour
     NavMeshAgent _navMeshAgent;
     Camera mainCam;
     GameManager _gameManager;
+    AudioSource _audioSource;
     private MeshRenderer _renderer;
+    // get audio source
+    public AudioClip collectKeySound;
+    public AudioClip hitSound;
 
     void Start()
     {
@@ -19,6 +23,9 @@ public class Player : MonoBehaviour
         mainCam = Camera.main;
         _gameManager = GameObject.FindObjectOfType<GameManager>();
         _renderer = GetComponent<MeshRenderer>();
+
+        // Get audio source component
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -49,9 +56,13 @@ public class Player : MonoBehaviour
             print("Key " + keyNum + " picked up");
             Destroy(other.gameObject);
             PublicVars.hasKey[keyNum] = true;
+            // play sound
+            _audioSource.PlayOneShot(collectKeySound);
         } else if (other.CompareTag("Enemy") || other.CompareTag("Poison")){
             _gameManager.loseLife(1);
             StartCoroutine(FlashRed());
+            // play sound
+            _audioSource.PlayOneShot(hitSound);
         }
     }
 }
