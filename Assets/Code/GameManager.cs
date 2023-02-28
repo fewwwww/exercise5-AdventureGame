@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject explosion;
     public string gameOverScene = "Start";
-    private int lives = 3;
+    public int lives = 3;
     
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     public void loseLife(int numLives){
         lives -= numLives;
-
+        print(lives);
         if (lives<=0){
             StartCoroutine(PlayerDeath());
         }

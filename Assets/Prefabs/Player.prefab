@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce74d11fe208f42839015d41cc363e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poison: {fileID: 3805168680095475272, guid: 0eb5fdb7686b6ac4b8da14a1e963edf0, type: 3}
 --- !u!54 &2402899169125641855
 Rigidbody:
   m_ObjectHideFlags: 0
