@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-
 public class GameManager : MonoBehaviour
 {
     public GameObject explosion;
@@ -13,12 +12,11 @@ public class GameManager : MonoBehaviour
     private int lives;
     public TextMeshProUGUI livesUI;
 
-    
     // Start is called before the first frame update
     void Start()
     {
         lives = totalLives;
-        livesUI.text = "lives: " + lives;  
+        livesUI.text = "Lives: " + lives;  
         if(GameObject.FindObjectsOfType<GameManager>().Length > 1)
         {
             Destroy(gameObject);
@@ -30,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     public void loseLife(int numLives){
         lives -= numLives;
-        livesUI.text = "lives: " + lives;
+        livesUI.text = "Lives: " + lives;
         if (lives<=0){
             StartCoroutine(PlayerDeath());
         }
@@ -43,6 +41,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(gameOverScene);
         lives = totalLives;
+        livesUI.text = "Lives: " + lives;
     }
 
     // Update is called once per frame
