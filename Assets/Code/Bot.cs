@@ -8,6 +8,7 @@ public class Bot : MonoBehaviour
     NavMeshAgent _navMeshAgent;
     GameObject player;
     public GameObject explosion;
+    public int waitSecs = 1;
 
     void Start()
     {
@@ -25,7 +26,7 @@ public class Bot : MonoBehaviour
         while (true)
         {
             // Wait a second
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(waitSecs);
             // Set the destination to the player's position
             if (player != null) {
                 _navMeshAgent.destination = player.transform.position;

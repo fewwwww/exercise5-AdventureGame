@@ -63,6 +63,11 @@ public class Player : MonoBehaviour
             StartCoroutine(FlashRed());
             // play sound
             _audioSource.PlayOneShot(hitSound);
+        } else if (other.CompareTag("KillWall")){
+            // play sound
+            _audioSource.PlayOneShot(hitSound);
+            _gameManager.loseLife(3);
+            
         }
     }
 }
