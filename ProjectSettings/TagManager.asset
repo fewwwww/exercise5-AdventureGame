@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Key
+  - Poison
+  - Enemy
+  - KillWall
+  - Teleport
   layers:
   - Default
   - TransparentFX
