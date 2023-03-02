@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Scene scene = SceneManager.GetActiveScene(); // get the current scene
+        gameOverScene = scene.name;
         lives = totalLives;
         if(GameObject.FindObjectsOfType<GameManager>().Length > 1)
         {

@@ -32,6 +32,10 @@ public class TeleportDoor : MonoBehaviour
     }
 
     void TeleportPlayer() {
-        player.transform.position = teleportDest.transform.position;
+        Destroy(player);
+        // player.transform.position = teleportDest.transform.position;
+        Instantiate(player, teleportDest.transform.position, Quaternion.identity);
+        print(player.transform.position);
+        // player.transform.position = new Vector3(7.88f, 1.0f, 1.12f);
     }
 }
