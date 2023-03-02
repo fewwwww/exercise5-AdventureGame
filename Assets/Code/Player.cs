@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     // get audio source
     public AudioClip collectKeySound;
     public AudioClip hitSound;
+    public CanvasLives canvasLives;
 
     void Start()
     {
@@ -60,6 +61,7 @@ public class Player : MonoBehaviour
             _audioSource.PlayOneShot(collectKeySound);
         } else if (other.CompareTag("Enemy") || other.CompareTag("Poison")){
             _gameManager.loseLife(1);
+            canvasLives.SetLivesText();
             StartCoroutine(FlashRed());
             // play sound
             _audioSource.PlayOneShot(hitSound);

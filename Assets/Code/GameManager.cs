@@ -9,14 +9,12 @@ public class GameManager : MonoBehaviour
     public GameObject explosion;
     public string gameOverScene = "Start";
     public int totalLives = 3;
-    private int lives;
-    public TextMeshProUGUI livesUI;
+    public int lives = 3;
 
     // Start is called before the first frame update
     void Start()
     {
         lives = totalLives;
-        livesUI.text = "Lives: " + lives;  
         if(GameObject.FindObjectsOfType<GameManager>().Length > 1)
         {
             Destroy(gameObject);
@@ -28,10 +26,10 @@ public class GameManager : MonoBehaviour
 
     public void loseLife(int numLives){
         lives -= numLives;
-        livesUI.text = "Lives: " + lives;
         if (lives<=0){
             StartCoroutine(PlayerDeath());
         }
+
     }
 
     IEnumerator PlayerDeath() {
@@ -41,7 +39,10 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(gameOverScene);
         lives = totalLives;
-        livesUI.text = "Lives: " + lives;
+    }
+
+    public int GetLives() {
+        return lives;
     }
 
     // Update is called once per frame

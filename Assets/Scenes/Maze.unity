@@ -486,6 +486,14 @@ PrefabInstance:
       propertyPath: m_AngularSpeed
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 2402899169125641849, guid: 51168610ca0bd0c49b18033d592c3da8, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 870408982}
+    - target: {fileID: 2402899169125641849, guid: 51168610ca0bd0c49b18033d592c3da8, type: 3}
+      propertyPath: canvasLives
+      value: 
+      objectReference: {fileID: 870408983}
     - target: {fileID: 2402899169125641850, guid: 51168610ca0bd0c49b18033d592c3da8, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -876,6 +884,7 @@ GameObject:
   - component: {fileID: 870408982}
   - component: {fileID: 870408981}
   - component: {fileID: 870408980}
+  - component: {fileID: 870408983}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -965,6 +974,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &870408983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870408978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67efa19f9ad90b84387c2a5ab95650a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  livesUI: {fileID: 513408009}
 --- !u!1001 &1032186916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2562,7 +2584,7 @@ MonoBehaviour:
   explosion: {fileID: 3805168680095475272, guid: 3c7a9f0cf6c1fc54597326caf3d721ac, type: 3}
   gameOverScene: Maze
   totalLives: 3
-  livesUI: {fileID: 513408009}
+  lives: 0
 --- !u!4 &2102700062
 Transform:
   m_ObjectHideFlags: 0
