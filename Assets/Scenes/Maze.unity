@@ -1301,7 +1301,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4211724502397625080, guid: 7ca91f6c2dd7eab4f86049bde216374e, type: 3}
       propertyPath: waitSecs
-      value: 40
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4211724502397625081, guid: 7ca91f6c2dd7eab4f86049bde216374e, type: 3}
       propertyPath: m_RootOrder
@@ -1317,7 +1317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4211724502397625081, guid: 7ca91f6c2dd7eab4f86049bde216374e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.1
+      value: -5.86
       objectReference: {fileID: 0}
     - target: {fileID: 4211724502397625081, guid: 7ca91f6c2dd7eab4f86049bde216374e, type: 3}
       propertyPath: m_LocalRotation.w
