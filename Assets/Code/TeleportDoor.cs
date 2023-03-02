@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class TeleportDoor : MonoBehaviour
 {
@@ -9,9 +10,11 @@ public class TeleportDoor : MonoBehaviour
     public int keyNum = 0;
     GameObject player;
     public Transform teleportDest;
+    NavMeshObstacle _navMeshObstacle;
 
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player");
+        _navMeshObstacle = GetComponent<NavMeshObstacle>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,10 +35,10 @@ public class TeleportDoor : MonoBehaviour
     }
 
     void TeleportPlayer() {
-        Destroy(player);
-        // player.transform.position = teleportDest.transform.position;
-        Instantiate(player, teleportDest.transform.position, Quaternion.identity);
-        print(player.transform.position);
-        // player.transform.position = new Vector3(7.88f, 1.0f, 1.12f);
+
+        player.transform.position = teleportDest.transform.position;
+        _navMeshObstacle.carving = true;
+        _navMeshObstacle.carveOnlyStationary = true;
+
     }
 }
