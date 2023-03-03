@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Maze.unity
     guid: 46a611a6b09afb04e93e008bdc3a0e11
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-    guid: 24c5b9c8669e64c4f9934f7688baea68
+    path: Assets/Scenes/Congrats.unity
+    guid: 16bea10364a7790468209ea37c522054
   m_configObjects: {}
