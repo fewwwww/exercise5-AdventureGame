@@ -2,15 +2,15 @@
 
 ## Contributors:
 
-> Name: 							;Github UserName
+> Name: 							Github UserName
 >
-> Michael Chen				;Michael-Susu12138
+> Michael Chen:				Michael-Susu12138
 >
-> Suning Yao							;fewwwww
+> Suning Yao:							fewwwww
 >
-> Sabrina Li								;swl416
+> Sabrina Li:							  swl416
 >
-> Ethan Don								;Theeb12
+> Ethan Don:								Theeb12
 
 ## Current Game Loop:
 
