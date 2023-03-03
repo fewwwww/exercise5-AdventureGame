@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 3805168680095475272, guid: 3c7a9f0cf6c1fc54597326caf3d721ac, type: 3}
-  gameOverScene: Maze
+  gameOverScene: Maze4
   totalLives: 3
   lives: 0
 --- !u!4 &55179739
@@ -2812,7 +2812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4211724502397625085, guid: 7ca91f6c2dd7eab4f86049bde216374e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4211724502397625087, guid: 7ca91f6c2dd7eab4f86049bde216374e, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3954,6 +3954,10 @@ PrefabInstance:
     - target: {fileID: 4015827552673111709, guid: e02dfbf77800c634087ba08ffaec605a, type: 3}
       propertyPath: keyNum
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015827552673111709, guid: e02dfbf77800c634087ba08ffaec605a, type: 3}
+      propertyPath: levelToLoad
+      value: Maze2
       objectReference: {fileID: 0}
     - target: {fileID: 4015827552673111710, guid: e02dfbf77800c634087ba08ffaec605a, type: 3}
       propertyPath: m_Materials.Array.data[0]

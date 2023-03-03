@@ -17,13 +17,13 @@ public class GameManager : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene(); // get the current scene
         gameOverScene = scene.name;
         lives = totalLives;
-        if(GameObject.FindObjectsOfType<GameManager>().Length > 1)
+        /*if(GameObject.FindObjectsOfType<GameManager>().Length > 1)
         {
             Destroy(gameObject);
         }
         else{
             DontDestroyOnLoad(gameObject);
-        }
+        }*/
     }
 
     public void loseLife(int numLives){
