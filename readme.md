@@ -14,6 +14,6 @@
 
 ## Current Game Loop:
 
-> ## Start     ->    Game   ->	Maze2 	-> 	Maze   ->    Congrats    -> Game
+> ## Start     ->    Game   -> Maze0 ->	Maze2 	-> 	Maze   ->    Congrats    -> Game
 >
 > ### (please keep this game loop in mind and updated if you change anything)
