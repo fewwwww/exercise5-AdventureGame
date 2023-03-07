@@ -59,7 +59,7 @@ public class Player : MonoBehaviour
             PublicVars.hasKey[keyNum] = true;
             // play sound
             _audioSource.PlayOneShot(collectKeySound);
-        } else if (other.CompareTag("Enemy") || other.CompareTag("Poison")){
+        } else if (other.CompareTag("Enemy")){
             _gameManager.loseLife(1);
             canvasLives.SetLivesText();
             StartCoroutine(FlashRed());
