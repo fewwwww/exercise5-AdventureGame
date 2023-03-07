@@ -50,10 +50,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6377896667280770366}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &6400757424455776452
@@ -630,12 +630,12 @@ GameObject:
   - component: {fileID: 6378825508295705802}
   - component: {fileID: 6378825508305354644}
   - component: {fileID: 6378825508028083867}
-  - component: {fileID: 6378825508028083866}
   - component: {fileID: 6378825508028083865}
   - component: {fileID: 6378825508028083840}
   - component: {fileID: 6378825508028083844}
   - component: {fileID: 6378825508028083845}
   - component: {fileID: -2140500042157529433}
+  - component: {fileID: 8570723723407126645}
   m_Layer: 0
   m_Name: sheep
   m_TagString: Player
@@ -698,19 +698,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6378825508028083866
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6378825508295872746}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 8.005732, y: 9.688294, z: 11.866938}
-  m_Center: {x: 0.035407543, y: 4.3441463, z: -0.2734506}
 --- !u!82 &6378825508028083865
 AudioSource:
   m_ObjectHideFlags: 0
@@ -893,6 +880,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6378825508295872746}
+  m_Mesh: {fileID: 0}
+--- !u!64 &8570723723407126645
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6378825508295872746}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1 &6378825508295872748
 GameObject:
