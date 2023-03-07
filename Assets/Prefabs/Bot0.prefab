@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7185089679497880337}
   - component: {fileID: 7185089679490718505}
-  - component: {fileID: 6944635971398454137}
   - component: {fileID: 4339843629657307215}
   - component: {fileID: 4907117831661244242}
+  - component: {fileID: -4322742348878471104}
   m_Layer: 0
   m_Name: Bot0
   m_TagString: Enemy
@@ -59,19 +59,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!65 &6944635971398454137
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7185089679498022641}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 9.316325, y: 12.631947, z: 9.209796}
-  m_Center: {x: -0.05428751, y: 4.1110783, z: -0.07669448}
 --- !u!114 &4339843629657307215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +95,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &-4322742348878471104
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7185089679498022641}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 4.3111672
+  m_Height: 9.976433
+  m_Direction: 1
+  m_Center: {x: 0, y: 3.7706366, z: 0.02812147}
 --- !u!1 &7185089679498022643
 GameObject:
   m_ObjectHideFlags: 0
