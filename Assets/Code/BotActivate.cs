@@ -9,7 +9,7 @@ public class BotActivate : MonoBehaviour
     GameObject player;
     GameObject key;
     public GameObject explosion;
-    private bool activated = false;
+    public int waitSecs = 1;
 
     void Start()
     {
@@ -20,12 +20,13 @@ public class BotActivate : MonoBehaviour
     }
 
     public void ActivateBot() {
-        activated = true;
+        StartCoroutine(ChasePlayer());
     }
 
-    void Update() {
-        if (activated) {
+    IEnumerator ChasePlayer() {
+        while (true) {
             // Set the destination to the player's position
+            yield return new WaitForSeconds(waitSecs);
             if (player != null) {
                 _navMeshAgent.destination = player.transform.position;
             } else {
