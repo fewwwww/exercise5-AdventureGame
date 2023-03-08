@@ -10,11 +10,14 @@ public class Player : MonoBehaviour
     Camera mainCam;
     GameManager _gameManager;
     AudioSource _audioSource;
-    private MeshRenderer _renderer;
+    private SkinnedMeshRenderer _renderer;
     // get audio source
     public AudioClip collectKeySound;
     public AudioClip hitSound;
     public CanvasLives canvasLives;
+    public GameObject body;
+    public Material sheepMaterial;
+    public Material redMaterial;
 
     void Start()
     {
@@ -23,8 +26,8 @@ public class Player : MonoBehaviour
         // Get the main camera
         mainCam = Camera.main;
         _gameManager = GameObject.FindObjectOfType<GameManager>();
-        _renderer = GetComponent<MeshRenderer>();
-
+        _renderer = body.GetComponent<SkinnedMeshRenderer>();
+        _renderer.material = sheepMaterial;
         // Get audio source component
         _audioSource = GetComponent<AudioSource>();
     }
@@ -43,9 +46,9 @@ public class Player : MonoBehaviour
     }
 
     IEnumerator FlashRed() {
-        _renderer.material.color = Color.red;
+        _renderer.material = redMaterial;
         yield return new WaitForSeconds(.1f);
-        _renderer.material.color = Color.white;
+        _renderer.material = sheepMaterial;
     }
 
     private void OnTriggerEnter(Collider other)
