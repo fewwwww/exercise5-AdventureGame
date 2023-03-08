@@ -10,6 +10,12 @@ public class GameManager : MonoBehaviour
     public string gameOverScene = "Start";
     public int totalLives = 3;
     public int lives = 3;
+    public TextMeshProUGUI reduceHealthUI;
+
+    private void Awake()
+    {
+        reduceHealthUI.gameObject.SetActive(false);  
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -17,21 +23,24 @@ public class GameManager : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene(); // get the current scene
         gameOverScene = scene.name;
         lives = totalLives;
-        if(GameObject.FindObjectsOfType<GameManager>().Length > 1)
+        reduceHealthUI.gameObject.SetActive(false);  
+        /*if(GameObject.FindObjectsOfType<GameManager>().Length > 1)
         {
             Destroy(gameObject);
         }
         else{
             DontDestroyOnLoad(gameObject);
-        }
+        }*/
     }
 
     public void loseLife(int numLives){
         lives -= numLives;
+        
         if (lives<=0){
             StartCoroutine(PlayerDeath());
         }
-
+        reduceHealthUI.text = "-" + numLives;
+        ReduceHealthText();
     }
 
     IEnumerator PlayerDeath() {
@@ -41,6 +50,15 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(gameOverScene);
         lives = totalLives;
+    }
+
+    public void ReduceHealthText(){
+        reduceHealthUI.gameObject.SetActive(true);
+        Invoke("SetInactive", .5f);
+    }
+
+    public void SetInactive(){
+        reduceHealthUI.gameObject.SetActive(false);
     }
 
     public int GetLives() {

@@ -35,10 +35,13 @@ public class TeleportDoor : MonoBehaviour
     }
 
     void TeleportPlayer() {
-
-        player.transform.position = teleportDest.transform.position;
         _navMeshObstacle.carving = true;
         _navMeshObstacle.carveOnlyStationary = true;
-
+        //print(_navMeshObstacle.carving);
+        player.transform.position = teleportDest.transform.position;
+        
+        _navMeshObstacle.carving = false;
+        _navMeshObstacle.carveOnlyStationary = false;
+        //print(_navMeshObstacle.carving);
     }
 }
