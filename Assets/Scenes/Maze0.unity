@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2471,7 +2471,7 @@ PrefabInstance:
     - target: {fileID: 8535215655806489598, guid: ea7d9341d79a1f24c8c65cc7d3f8a452, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c6615136149f44787b512c2906837f95, type: 2}
+      objectReference: {fileID: 2100000, guid: e490df06d3412094ab42fb5c16c222e0, type: 2}
     - target: {fileID: 8862594332752219434, guid: ea7d9341d79a1f24c8c65cc7d3f8a452, type: 3}
       propertyPath: botNames
       value: mole
