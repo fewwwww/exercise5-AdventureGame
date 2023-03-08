@@ -1537,7 +1537,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1676,7 +1676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectKeySound: {fileID: 8300000, guid: b00309c81240f46dcbeefbb1e6dd7a69, type: 3}
-  hitSound: {fileID: 8300000, guid: 6894706c2daa94b428b9f45103033ed0, type: 3}
+  hitSound: {fileID: 8300000, guid: e0b54c40e0e066342b418e90642483bf, type: 3}
   canvasLives: {fileID: 0}
   body: {fileID: 1341924106989326110}
   sheepMaterial: {fileID: 2100000, guid: e19a93ddbb124fb4cb2857eccb52b23f, type: 2}

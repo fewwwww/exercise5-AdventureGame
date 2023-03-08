@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public int totalLives = 3;
     public int lives = 3;
     public TextMeshProUGUI reduceHealthUI;
+    AudioSource _audioSource;
+    public AudioClip sheepSound;
 
     private void Awake()
     {
@@ -24,6 +26,7 @@ public class GameManager : MonoBehaviour
         gameOverScene = scene.name;
         lives = totalLives;
         reduceHealthUI.gameObject.SetActive(false);  
+        _audioSource = GetComponent<AudioSource>();
         /*if(GameObject.FindObjectsOfType<GameManager>().Length > 1)
         {
             Destroy(gameObject);
@@ -44,6 +47,7 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator PlayerDeath() {
+        _audioSource.PlayOneShot(sheepSound);
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         Instantiate(explosion, player.transform.position, Quaternion.identity);
         Destroy(player);
