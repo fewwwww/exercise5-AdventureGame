@@ -1550,6 +1550,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ed36096f9df72f42a401253cf734f51, type: 3}
+--- !u!1 &1198907926 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1341924106989326110, guid: 2be7af3134902be4b8c47a99bd78d215, type: 3}
+  m_PrefabInstance: {fileID: 1341924107498061804}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1265317086 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3874798687770068871, guid: 2d678e3e202b1344d999c6e60927f9ab, type: 3}
@@ -2697,9 +2702,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5339400938302166582, guid: 2be7af3134902be4b8c47a99bd78d215, type: 3}
+      propertyPath: body
+      value: 
+      objectReference: {fileID: 1198907926}
+    - target: {fileID: 5339400938302166582, guid: 2be7af3134902be4b8c47a99bd78d215, type: 3}
       propertyPath: canvasLives
       value: 
       objectReference: {fileID: 870408983}
+    - target: {fileID: 5339400938302166582, guid: 2be7af3134902be4b8c47a99bd78d215, type: 3}
+      propertyPath: redMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 7d984aef16e1e491dba65c49f7629f5c, type: 2}
+    - target: {fileID: 5339400938302166582, guid: 2be7af3134902be4b8c47a99bd78d215, type: 3}
+      propertyPath: sheepMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: e19a93ddbb124fb4cb2857eccb52b23f, type: 2}
     - target: {fileID: 5339400938302166585, guid: 2be7af3134902be4b8c47a99bd78d215, type: 3}
       propertyPath: m_Name
       value: sheep
