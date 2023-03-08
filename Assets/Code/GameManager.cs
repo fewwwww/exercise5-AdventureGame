@@ -39,8 +39,8 @@ public class GameManager : MonoBehaviour
         if (lives<=0){
             StartCoroutine(PlayerDeath());
         }
+        reduceHealthUI.text = "-" + numLives;
         ReduceHealthText();
-
     }
 
     IEnumerator PlayerDeath() {
