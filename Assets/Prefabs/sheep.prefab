@@ -1678,6 +1678,9 @@ MonoBehaviour:
   collectKeySound: {fileID: 8300000, guid: b00309c81240f46dcbeefbb1e6dd7a69, type: 3}
   hitSound: {fileID: 8300000, guid: 6894706c2daa94b428b9f45103033ed0, type: 3}
   canvasLives: {fileID: 0}
+  body: {fileID: 1341924106989326110}
+  sheepMaterial: {fileID: 2100000, guid: e19a93ddbb124fb4cb2857eccb52b23f, type: 2}
+  redMaterial: {fileID: 2100000, guid: 7d984aef16e1e491dba65c49f7629f5c, type: 2}
 --- !u!195 &5339400938302166581
 NavMeshAgent:
   m_ObjectHideFlags: 0
