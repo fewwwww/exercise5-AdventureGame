@@ -63,11 +63,11 @@ public class Player : MonoBehaviour
             // play sound
             _audioSource.PlayOneShot(collectKeySound);
         } else if (other.CompareTag("Enemy")){
-            _gameManager.loseLife(1);
-            canvasLives.SetLivesText();
-            StartCoroutine(FlashRed());
             // play sound
             _audioSource.PlayOneShot(hitSound);
+            StartCoroutine(FlashRed());
+            _gameManager.loseLife(1);
+            canvasLives.SetLivesText();
         } else if (other.CompareTag("KillWall")){
             // play sound
             _audioSource.PlayOneShot(hitSound);
