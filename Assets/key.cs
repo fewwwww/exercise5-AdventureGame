@@ -18,7 +18,7 @@ public class key : MonoBehaviour
     {
         transform.Rotate(0, 60*Time.deltaTime, 30 * Time.deltaTime);
     }
-    private void OnCollisionEnter(Collision col)
+    private void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.CompareTag("Player"))
         {
