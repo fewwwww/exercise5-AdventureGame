@@ -17,6 +17,7 @@ public class BotStartAfterCollectingKey : MonoBehaviour
         player = GameObject.FindGameObjectsWithTag("Player")[0];
         // Get the key
         key = GameObject.FindGameObjectsWithTag("Key")[0];
+
     }
 
     void Update() {
