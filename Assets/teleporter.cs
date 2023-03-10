@@ -16,8 +16,9 @@ public class teleporter : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collision col)
+    private void OnTriggerEnter(Collider col)
     {
+        Debug.Log("collided");
         if (col.gameObject.CompareTag("Player"))
         {
             col.gameObject.transform.position = teleportLocation.transform.position;
